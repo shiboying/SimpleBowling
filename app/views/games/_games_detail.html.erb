@@ -1,0 +1,74 @@
+<div class="form-container">
+  <% @games.each do |game| %>
+    <%= form_for game, url: '/games' do |f| %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="player-name">Player name: <%= game.player_name %></div>
+      <div class="table">
+        <div class="thead">
+          <div class="row">
+            <% (1..10).each do |i| %>
+              <div class="col"><%= i %></div>
+            <% end %>
+            <div class="col">total</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div class="row">
+            <div class="col">
+              <%= f.text_field :one_first, readonly: true %>
+              <%= f.text_field :one_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :two_first, readonly: true %>
+              <%= f.text_field :two_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :three_first, readonly: true %>
+              <%= f.text_field :three_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :four_first, readonly: true %>
+              <%= f.text_field :four_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :five_first, readonly: true %>
+              <%= f.text_field :five_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :six_first, readonly: true %>
+              <%= f.text_field :six_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :seven_first, readonly: true %>
+              <%= f.text_field :seven_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :eight_first, readonly: true %>
+              <%= f.text_field :eight_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :nine_first, readonly: true %>
+              <%= f.text_field :nine_second, readonly: true %>
+            </div>
+            <div class="col">
+              <%= f.text_field :ten_first, readonly: true %>
+              <%= f.text_field :ten_second, readonly: true %>
+              <%= f.text_field :ten_third, readonly: true %>
+            </div>
+            <div class="cell js-final-score">
+              <%= game.final_score %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="float-left">
+    <%= link_to 'Play new game', new_player_path %>
+  </div>
+  <div class="float-right">
+    <%= link_to 'Back to Home', root_path %>
+  </div>
+</div>
+
+

@@ -1,0 +1,6 @@
+<% if @games.present? %>
+  <h1 class="text-center">Games Summary</h1>
+  <%= render partial: 'games_detail', locals: { games: @games } %>
+<% else %>
+  <h1>You haven't played any game, please play one.</h1>
+<% end %>

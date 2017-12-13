@@ -1,0 +1,68 @@
+<h1 class="text-center">Let's play a new game</h1>
+<div class="form-container">
+  <%= form_for @game, as: :game, url: '/games' do |f| %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="table">
+      <div class="thead">
+        <div class="row">
+          <% (1..10).each do |i| %>
+            <div class="col"><%= i %></div>
+          <% end %>
+          <div class="col">total</div>
+        </div>
+      </div>
+      <div class="tbody">
+        <div class="row">
+            <div class="col">
+              <%= f.text_field :one_first, maxlength: 1 %>
+              <%= f.text_field :one_second, maxlength: 1 %>
+            </div>
+          <div class="col">
+            <%= f.text_field :two_first, maxlength: 1 %>
+            <%= f.text_field :two_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :three_first, maxlength: 1 %>
+            <%= f.text_field :three_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :four_first, maxlength: 1 %>
+            <%= f.text_field :four_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :five_first, maxlength: 1 %>
+            <%= f.text_field :five_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :six_first, maxlength: 1 %>
+            <%= f.text_field :six_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :seven_first, maxlength: 1 %>
+            <%= f.text_field :seven_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :eight_first, maxlength: 1 %>
+            <%= f.text_field :eight_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :nine_first, maxlength: 1 %>
+            <%= f.text_field :nine_second, maxlength: 1 %>
+          </div>
+          <div class="col">
+            <%= f.text_field :ten_first, maxlength: 1 %>
+            <%= f.text_field :ten_second, maxlength: 1 %>
+            <%= f.text_field :ten_third, maxlength: 1 %>
+          </div>
+          <div class="cell js-final-score-text">0</div>
+          <%= f.hidden_field :final_score, class: 'js-final-score-val', value: 0 %>
+        </div>
+      </div>
+      <div class="tfoot pt-2">
+        <div class="row">
+          <input type="submit" value="Save this game" class="btn border"/>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
