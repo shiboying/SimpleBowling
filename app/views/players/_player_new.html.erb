@@ -1,0 +1,10 @@
+<div class="container text-center new-player-page-container">
+  <h4>Tell me who you are</h4>
+  <%= form_for player,
+                      url: { controller: 'players', action: :create },
+                      method: :post,
+                      input_html: { class: 'form-inline' } do |f| %>
+    <%= f.text_field :name, required: true, class: 'player-name' %>
+    <%= f.submit "Let's play" %>
+  <% end %>
+</div>
