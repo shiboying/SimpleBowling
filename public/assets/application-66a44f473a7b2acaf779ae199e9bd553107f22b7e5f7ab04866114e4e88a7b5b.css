@@ -1,0 +1,85 @@
+/* line 5, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+body.index {
+  background-image: url(/assets/bg-index-320ed50fd8d75469fa0326894a80deea6a19ed3c93516dcea843c22ff8aaa2fb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 11, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.container.index-page-container {
+  margin-top: 20%;
+}
+
+/* line 15, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.index-page-header {
+  color: #FFFFFF;
+  background: linear-gradient(to left, #009fe1 20%, #FFF 40%, #FFF 60%, #009fe1 80%);
+  background-size: 200% auto;
+  background-clip: revert;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+/* line 32, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.cl-effect-5 a {
+  color: #d8b2d8;
+  font-size: 40px;
+  overflow: hidden;
+  margin-top: 30px;
+  padding: 0 4px;
+  height: 1.5em;
+}
+
+/* line 41, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.cl-effect-5 a span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 49, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.cl-effect-5 a span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  color: #d8b2d8;
+  font-size: 40px;
+  font-weight: 500;
+  height: 1.5em;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 62, /Users/boying.shi/src/SimpleBowling/app/assets/stylesheets/index.scss */
+.cl-effect-5 a:hover span,
+.cl-effect-5 a:focus span {
+  color: #FDF3E7;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
