@@ -7,7 +7,7 @@ class PlayersController < ApplicationController
     @player = Player.new(player_param)
     if @player.valid?
       @player.save!
-      redirect_to root_path
+      redirect_to new_game_path
     else
       render action: :new
     end
