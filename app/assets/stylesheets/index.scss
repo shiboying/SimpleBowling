@@ -1,0 +1,68 @@
+// Place all the styles related to the Index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  background-image: image_url('bg-index.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container.index-page-container {
+  margin-top: 20%;
+}
+
+.index-page-header {
+  color: #FFFFFF;
+  background: linear-gradient(to left, #009fe1 20%, #FFF 40%, #FFF 60%, #009fe1 80%);
+   background-size: 200% auto;
+   background-clip: revert;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+   animation: shine 1s linear infinite;
+   @keyframes shine {
+     to {
+       background-position: 200% center;
+     }
+   }
+}
+
+.cl-effect-5 a {
+  color: #d8b2d8;
+  font-size: 40px;
+  overflow: hidden;
+  margin-top: 30px;
+  padding: 0 4px;
+  height: 1.5em;
+}
+
+.cl-effect-5 a span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.cl-effect-5 a span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  color: #d8b2d8;
+  font-size: 40px;
+  font-weight: 500;
+  height: 1.5em;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.cl-effect-5 a:hover span,
+.cl-effect-5 a:focus span {
+  color: #FDF3E7;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
