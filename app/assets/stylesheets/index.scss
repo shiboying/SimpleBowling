@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+body {
   background-image: image_url('bg-index.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,18 +15,18 @@ body{
 .index-page-header {
   color: #FFFFFF;
   background: linear-gradient(to left, #009fe1 20%, #FFF 40%, #FFF 60%, #009fe1 80%);
-   background-size: 200% auto;
-   background-clip: revert;
-   text-fill-color: transparent;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  background-clip: revert;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-   animation: shine 1s linear infinite;
-   @keyframes shine {
-     to {
-       background-position: 200% center;
-     }
-   }
+  animation: shine 1s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
 .cl-effect-5 a {
@@ -69,4 +69,73 @@ body{
 
 .new-player-page-container {
   margin-top: 10%;
+}
+
+.form-container {
+  padding-top: 2%;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 20em;
+  float: none;
+}
+
+.table {
+  background: #fff;
+  display: inline;
+
+  input {
+    width: 1.8em;
+    float: left;
+    text-align: right;
+  }
+}
+
+.thead {
+  font-weight: bold;
+  .row {
+    background: #084A8C;
+    width: 120%;
+  }
+  .col {
+    color: #fff;
+    text-align: center;
+    min-width: 5em;
+  }
+}
+
+.tbody {
+  input {
+    border: 1px solid #ccc;
+    padding: .5em;
+  }
+  .row {
+    background: #F7F7F7;
+    width: 120%;
+  }
+  .col {
+    color: #084A8C;
+    display: flex;
+    flex-direction: row;
+    padding: 0.1em 0.5em;
+    text-align: center;
+    min-width: 5em;
+  }
+}
+
+.cell {
+  padding: 0.5em;
+  text-align: center;
+  min-width: 4.8em;
+}
+
+.tfoot {
+  input {
+    padding: .5em;
+    width: 10em;
+    text-align: center;
+  }
+}
+
+.player-name {
+  color: #FFFFFF;
 }
