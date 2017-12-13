@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :players, only: [:new, :create]
+
+  resources :games, only: [:index, :new, :create]
 end
