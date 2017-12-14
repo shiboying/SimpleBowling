@@ -73,9 +73,7 @@ body {
 
 .form-container {
   padding-top: 2%;
-  border-radius: 5px;
-  width: 50%;
-  margin-left: 20em;
+  width: auto;
   float: none;
 }
 
@@ -84,7 +82,7 @@ body {
   display: inline;
 
   input {
-    width: 1.8em;
+    width: 2.5em;
     float: left;
     text-align: right;
   }
@@ -94,12 +92,14 @@ body {
   font-weight: bold;
   .row {
     background: #084A8C;
-    width: 120%;
+    width: auto;
+    margin: 0 2em;
   }
   .col {
     color: #fff;
     text-align: center;
     min-width: 5em;
+    padding-left: 2.5em;
   }
 }
 
@@ -110,7 +110,8 @@ body {
   }
   .row {
     background: #F7F7F7;
-    width: 120%;
+    width: auto;
+    margin: 0 2em;
   }
   .col {
     color: #084A8C;
@@ -131,8 +132,9 @@ body {
 .tfoot {
   input {
     padding: .5em;
-    width: 10em;
+    width: auto;
     text-align: center;
+    margin-left: 2.8em;
   }
 }
 
