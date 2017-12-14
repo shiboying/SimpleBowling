@@ -36,33 +36,45 @@ $(document).on('focusin', 'input', function(){
 
 $(document).on('change', 'input', function () {
   var prev = $(this).data('val');
-  if(prev === ''){
+  if (prev === '') {
     prev = 0;
-  }else if(prev === 'x' || prev === 'X'){
+  } else if (prev === 'x' || prev === 'X') {
     prev = 10;
-  }else{
+  } else {
     prev = parseInt(prev);
   }
 
   var cur = $(this).val();
-  if(cur === ''){
+  if (cur === '') {
     cur = 0;
     // enable next input
     const i = $('input').index($(this));
     $('input').eq(i + 1).prop('disabled', false);
 
-  }else if(cur === 'x' || cur === 'X'){
-    cur = 10;
-
-    // enable the one after next input
+  } else if (cur === 'x' || cur === 'X') {
     const i = $('input').index($(this));
-    $('input').eq(i + 1).val('-');
-    $('input').eq(i + 2).prop('disabled', false);
-  }else{
+    if (i % 2 == 0 ){
+      if ( $('input').eq(i - 1).val() !== '0') {
+        $(this).val('');
+        return;
+      }
+      // enable the next input
+      $('input').eq(i + 1).prop('disabled', false);
+    } else {
+      $('input').eq(i + 1).val('-');
+      // enable the one after next input
+      $('input').eq(i + 2).prop('disabled', false);
+    }
+
+    cur = 10;
+  } else if(isNaN(parseInt(cur))) {
+    $(this).val('');
+  } else {
     cur = parseInt(cur);
 
     // enable next input
     const i = $('input').index($(this));
+    console.log(i);
     $('input').eq(i + 1).prop('disabled', false);
   }
 
