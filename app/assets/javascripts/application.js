@@ -52,12 +52,21 @@ $(document).on('change', 'input', function () {
     $('input').eq(i + 1).prop('disabled', false);
 
   } else if (cur === 'x' || cur === 'X') {
-    cur = 10;
-
-    // enable the one after next input
     const i = $('input').index($(this));
-    $('input').eq(i + 1).val('-');
-    $('input').eq(i + 2).prop('disabled', false);
+    if (i % 2 == 0 ){
+      if ( $('input').eq(i - 1).val() !== '0') {
+        $(this).val('');
+        return;
+      }
+      // enable the next input
+      $('input').eq(i + 1).prop('disabled', false);
+    } else {
+      $('input').eq(i + 1).val('-');
+      // enable the one after next input
+      $('input').eq(i + 2).prop('disabled', false);
+    }
+
+    cur = 10;
   } else if(isNaN(parseInt(cur))) {
     $(this).val('');
   } else {
@@ -65,6 +74,7 @@ $(document).on('change', 'input', function () {
 
     // enable next input
     const i = $('input').index($(this));
+    console.log(i);
     $('input').eq(i + 1).prop('disabled', false);
   }
 
