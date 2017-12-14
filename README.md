@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run Simple Bowling app, you need to follow these steps:
 
-Things you may want to cover:
+1. bundle install
 
-* Ruby version
+2. rake db:migrate
 
-* System dependencies
+3. go to localhost:3000 in your browser
 
-* Configuration
+How to use SimpleBowling app:
 
-* Database creation
+1. Create a new player with name
 
-* Database initialization
+2. Enter scores (0 - 9, x or X for a strike), the scores will be automatically added up
 
-* How to run the test suite
+3. Save the game stats.
 
-* Services (job queues, cache servers, search engines, etc.)
+4. You can go to `Check past games` page to see all previous games you played.
 
-* Deployment instructions
-
-* ...
+Enjoy!
