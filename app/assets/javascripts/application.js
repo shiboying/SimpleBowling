@@ -36,29 +36,31 @@ $(document).on('focusin', 'input', function(){
 
 $(document).on('change', 'input', function () {
   var prev = $(this).data('val');
-  if(prev === ''){
+  if (prev === '') {
     prev = 0;
-  }else if(prev === 'x' || prev === 'X'){
+  } else if (prev === 'x' || prev === 'X') {
     prev = 10;
-  }else{
+  } else {
     prev = parseInt(prev);
   }
 
   var cur = $(this).val();
-  if(cur === ''){
+  if (cur === '') {
     cur = 0;
     // enable next input
     const i = $('input').index($(this));
     $('input').eq(i + 1).prop('disabled', false);
 
-  }else if(cur === 'x' || cur === 'X'){
+  } else if (cur === 'x' || cur === 'X') {
     cur = 10;
 
     // enable the one after next input
     const i = $('input').index($(this));
     $('input').eq(i + 1).val('-');
     $('input').eq(i + 2).prop('disabled', false);
-  }else{
+  } else if(isNaN(parseInt(cur))) {
+    $(this).val('');
+  } else {
     cur = parseInt(cur);
 
     // enable next input
